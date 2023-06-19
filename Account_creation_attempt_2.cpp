@@ -29,12 +29,20 @@ int Account_Login(string *username_list, string *password_list, int account_list
                 correct_credential_status = true;
             }
         }
+
+        //Loops through array of known usernames and passwords, if both inputted username and password matches an account, then correct_credential_status set true 
+
         if(correct_credential_status){
-            break;
+            return 0;
         }
+
+        //If correct_credential_status set true, returns to main and quits program
+
     }
-    return 0;
+    
 }
+
+//User inputs credentials or chooses to quit, if inputs matches with an account program ends
 
 string Account_Creation(string *username_list, string *password_list, int account_list_length){
     
@@ -144,3 +152,5 @@ int main(){
     }
 
 }
+
+//User choses to login to an existing account, or create a new one, if user logs in successfully, program ends
